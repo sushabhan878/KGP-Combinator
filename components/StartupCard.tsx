@@ -13,7 +13,7 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
                 </p>
                 <div className='flex gap-1.5'>
                     <EyeIcon className='size-6 text-pink-500' />
-                    <span className='font-workSans font-medium text-[16px] text-black'>{post.views}</span>
+                    <span className='font-workSans font-medium text-[16px] text-black'>{post.viewa}</span>
                 </div>
             </div>
             <div className='flex justify-between items-center mt-5 gap-5'>
