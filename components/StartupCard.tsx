@@ -3,6 +3,9 @@ import { EyeIcon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import { Button } from './ui/button'
+import { Author, Startup } from "../sanity/types"
+
+export type StartupCardType = Omit<Startup, "author"> & { author?: Author }
 
 const StartupCard = ({ post }: { post: StartupCardType }) => {
     return (
@@ -34,7 +37,7 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
                 <img src={post.image} alt="Placeholder" className='w-full h-[164px] rounded-[10px] object-cover' />
             </Link>
             <div className='flex justify-between items-center gap-3 mt-5'>
-                <Link href={`/?query=${post.category.toLowerCase()}`}>
+                <Link href={`/?query=${post.category?.toLowerCase()}`}>
                     <p className='font-workSans font-medium text-[16px] text-black'>{post.category}</p>
                 </Link>
                 <Button className='rounded-full bg-gray-900 font-medium text-[16px] text-white px-5 py-3' asChild>
