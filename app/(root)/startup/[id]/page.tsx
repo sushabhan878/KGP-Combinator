@@ -45,7 +45,7 @@ const StartupPage = async ({ params }: { params: Promise<{ id: string }> }) => {
                 <hr className='devider' />
                 {/* Editor selected startups /// TODO */}
                 <Suspense fallback={<Skeleton className='bg-zinc-400 h-10 w-24 rounded-lg fixed bottom-3 right-3' />}>
-                    <View/>
+                    <View id={id} />
                 </Suspense>
             </section>
         </>

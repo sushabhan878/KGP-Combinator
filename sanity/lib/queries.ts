@@ -16,7 +16,6 @@ export const STARTUP_QUERY = defineQuery(
     }`
 )
 
-
 export const STARTUP_BY_ID_QUERY = defineQuery(
     `* [_type == "startup" && _id == $id][0] {
         _id,
@@ -31,5 +30,12 @@ export const STARTUP_BY_ID_QUERY = defineQuery(
         category,
         pitch,
         image
+    }`
+)
+
+export const STARTUP_VIEWS_QUERY = defineQuery(
+    `*[_type == "startup" && _id == $id][0]{
+        _id,
+        viewa
     }`
 )
